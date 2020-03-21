@@ -20,4 +20,6 @@ public String getApellido() {
 public int getEdad() {
 	return edad;
 	}
+
+
 }

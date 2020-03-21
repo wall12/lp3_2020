@@ -20,6 +20,19 @@ public String getApellido() {
 public int getEdad() {
 	return edad;
 }
+
+public void setNombre(String nombre) {
+	this.nombre = nombre;
+}
+
+public void setApellido(String apellido) {
+	this.apellido = apellido;
+}
+
+public void setEdad(int edad) {
+	this.edad = edad;
+}
+
 public void Mostrar() {
 	System.out.println("==============================");
 	System.out.println("Apellido: " +getApellido());
