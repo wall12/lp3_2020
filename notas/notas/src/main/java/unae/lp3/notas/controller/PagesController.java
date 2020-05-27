@@ -17,24 +17,28 @@ public class PagesController {
 	{
 	String titulo="pages/index";
 	datos.addAttribute("titulo",titulo);
-	return "pages/index";
+	return "pages/index";	
 	}
-	@RequestMapping (value="saludo/{nombre}/{apellido}", method=RequestMethod.GET )
-public String goSaludo(Model datos, @PathVariable("nombre")String nombre, @PathVariable("apellido")String apellido) 
+	@RequestMapping (value="saludo/{nombre}/{apellido}", method=RequestMethod.GET )	
+public String goSaludo(Model datos, @PathVariable("nombre") String nombre, @PathVariable("apellido") String apellido) 
 	{
-	datos.addAttribute("nombre",nombre);
-	datos.addAttribute("apellido",apellido);
-	return "pages/saludos";	
-	}
+	datos.addAttribute("nombre",nombre);	
+	datos.addAttribute("apellido",apellido);	
+	return "pages/saludos";
+	}	
 	
 	@GetMapping(value="parametros")
-	public String getParam(@RequestParam("var") String valor, Model datos ) {
+	public String getParam(@RequestParam("var") String valor, Model datos )
+	{
 		datos.addAttribute("valor",valor);
 		return "pages/getparam";
 	}
 	@PostMapping(value="pparam")
-	public String postParam(@RequestParam("nombre") String valor, Model datos ) {
+	public String postParam(@RequestParam("nombre") String valor, Model datos )
+	{
 		datos.addAttribute("valor",valor);
 		return "pages/postparam";
 	}
+	
 }
+

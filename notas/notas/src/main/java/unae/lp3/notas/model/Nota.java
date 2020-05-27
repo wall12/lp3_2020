@@ -3,7 +3,7 @@ package unae.lp3.notas.model;
 import java.sql.Date;
 
 public class Nota {
-	private int id;
+	private int id=0;
 	private String titulo;
 	private String contenido;
 	private Date fecha;
@@ -13,13 +13,13 @@ public class Nota {
 	}
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
-	}*/
+	} */
 	public Nota(int id, String titulo, String contenido) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.contenido = contenido;
-		//this.fecha= new Date();
+		//this.fecha= new Date.;
 	}
 	public int getId() {
 		return id;
@@ -43,6 +43,8 @@ public class Nota {
 	public String toString() {
 		return "Nota [id=" + id + ", titulo=" + titulo + ", contenido=" + contenido + "]";
 	}
+		
+
 	
 	
 }
